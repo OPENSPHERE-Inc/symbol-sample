@@ -26,6 +26,7 @@ $ yarn start
 ## 4. 使い方
 
 まず、送金元のアカウントに XYM 残高がないと送金できません。
+
 Mainnet の場合は、[Zaif](https://zaif.jp/) 等で入手して出金を行っておいてください。
 
 Testnet の場合は [フォーセット](http://faucet.testnet.symboldev.network/) で入手することが出来ます。
