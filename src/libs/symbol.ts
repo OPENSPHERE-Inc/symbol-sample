@@ -168,11 +168,17 @@ export const searchConfirmedTx = async (recipientAddr: string, limit: number, pa
     const txHttp = repositoryFactory.createTransactionRepository();
 
     const criteria: TransactionSearchCriteria = {
+        // 承認済トランザクションを対象
         group: TransactionGroup.Confirmed,
+        // 受取人アドレスで限定
         recipientAddress: Address.createFromRawAddress(recipientAddr),
+        // 指定ページを取得
         pageNumber: page,
+        // 1ページの件数
         pageSize: limit,
+        // ソート順：ブロック高降順
         order: Order.Desc,
+        // 送金トランザクションに限定
         type: [ TransactionType.TRANSFER ],
     };
 
