@@ -130,7 +130,7 @@ export const waitForConfirmTx = async (signer: Account, signedTx: SignedTransact
 
             // リッスンする以前に承認済みだった場合をケア
             const tx = getConfirmedTx(signedTx.hash);
-            if (!tx) {
+            if (tx) {
                 return resolve(tx);
             }
         }).finally(() => {
